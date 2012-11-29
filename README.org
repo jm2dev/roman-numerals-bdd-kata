@@ -2,16 +2,16 @@
 
 See this [[https://gist.github.com/4162826][gist]] for plain text especification.
 
-Feature: Convert decimal numbers to roman numerals
+** Feature: Convert decimal numbers to roman numerals
 
- Scenario Outline: Generate a roman numeral
+Scenario Outline: Generate a roman numeral
 
- Given a decimal number equal to <decimal_number>
- When the roman numeral is generated
- Then roman numeral should be <roman_numeral>
+- Given a decimal number equal to <decimal number>
+- When the roman numeral is generated
+- Then roman numeral should be <roman numeral>
 
  Examples:
-      | decimal_number | roman_numeral |
+      | decimal number | roman numeral |
       | 1              | I             |
       | 2              | II            |
       | 3              | III           |

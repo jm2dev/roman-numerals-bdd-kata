@@ -15,13 +15,15 @@ class Decimal2RomanSpec extends FunSpec with GivenWhenThen with ShouldMatchers w
 
   describe("Convert decimal numbers to roman numerals") {
     forAll (numbers) { (decimal: Int, roman: String) =>
-      Given("a decimal number equal to %s".format(decimal))
-      When("the roman numeral is generated")
-      val romanNumeral = DecimalNumber(decimal).toRoman
-      Then("roman numeral should be %s".format(roman))
-      romanNumeral should be (roman)
+      it("%s should be %s".format(decimal, roman)) {
+        Given("a decimal number equal to %s".format(decimal))
+        When("the roman numeral is generated")
+        val romanNumeral = DecimalNumber(decimal).toRoman
+        Then("roman numeral should be %s".format(roman))
+        romanNumeral should be (roman)
 
-      DecimalNumber(decimal).toRoman should be (roman)
+        DecimalNumber(decimal).toRoman should be (roman)
+      }
     }
   }
 }
