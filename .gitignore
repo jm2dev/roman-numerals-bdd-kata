@@ -2,4 +2,6 @@
 .idea_modules/
 target/
 README.html
+.ensime
+.ensime_lucene/
 
