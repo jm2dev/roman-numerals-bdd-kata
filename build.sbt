@@ -12,3 +12,7 @@ libraryDependencies ++= Seq(
 )
 
 initialCommands := "import com.jm2dev.kata.bddkata._"
+
+site.settings
+
+site.includeScaladoc()
